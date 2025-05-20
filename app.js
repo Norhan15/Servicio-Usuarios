@@ -20,7 +20,7 @@ app.use("/", UserRouter);
 
 
 app.use((req, res) => {
-    res.status(404).send("Wrong route dev");
+    res.status(404).send("Wrong route QA");
 });
 
 config.connect().then(() => {
