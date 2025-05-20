@@ -20,7 +20,7 @@ app.use("/", UserRouter);
 
 
 app.use((req, res) => {
-    res.status(404).send("Wrong route test Jenkins Otra vez");
+    res.status(404).send("Wrong route qa");
 });
 
 config.connect().then(() => {
