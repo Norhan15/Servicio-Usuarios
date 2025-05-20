@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import config from './src/config/config.js';
 import TokenRouter from './src/Tokens/routes/tokens.routes.js';
-
+import UserRouter from './src/Users/routes/users.routes.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,6 +16,8 @@ app.use(cors({
 app.use(express.json());
 
 app.use("/", TokenRouter);
+app.use("/", UserRouter);
+
 
 app.use((req, res) => {
     res.status(404).send("Wrong route");

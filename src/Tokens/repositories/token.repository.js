@@ -11,3 +11,12 @@ export const createToken = async (token) => {
         throw error;
     }
 } 
+
+export const getAllTokens = async () => {
+    try {
+        return await Token.find(); // devuelve todos
+    } catch (error) {
+        console.error("Error al obtener tokens:", error);
+        throw error;
+    }
+};
